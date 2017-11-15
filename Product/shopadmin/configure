@@ -1,0 +1,66 @@
+[RULES]
+
+product_collect_category:
+    url: /product-collect-category
+    params: {"module":"Product", "action":"categoryListToAdmin"}
+
+
+product_collect_list:
+    url: /product-collect-list
+    params: {"module":"Product", "action":"productCollectList"}
+
+product_collect_new:
+    url: /new-product-collect
+    params: {"module":"Product", "action":"editProductCollect"}
+
+product_collect_edit:
+    url: /edit-product-collect/:collect_id
+    params: {"module":"Product", "action":"editProductCollect"}
+
+product_collect_type_list:
+    url: /product-collect-type-list
+    params: {"module":"Product", "action":"productCollectTypeList"}
+
+product_collect_type_new:
+    url: /new-product-collect-type
+    params: {"module":"Product", "action":"editProductCollectType"}
+
+product_collect_type_edit:
+    url: /edit-product-collect-type/:type_id
+    params: {"module":"Product", "action":"editProductCollectType"}
+
+product_collect_variant_list:
+    url: /product-collect-variant-list
+    params: {"module":"Product", "action":"productCollectVariantList"}
+
+product_collect_variant_new:
+    url: /new-product-collect-variant
+    params: {"module":"Product", "action":"editProductCollectVariant"}
+
+product_collect_variant_edit:
+    url: /edit-product-collect-variant/:variant_id
+    params: {"module":"Product", "action":"editProductCollectVariant"}
+
+product_collect_property_name_list:
+    url: /product-collect-property-name-list
+    params: {"module":"Product", "action":"productCollectPropertyNameList"}
+
+product_collect_property_name_new:
+    url: /new-product-collect-property-name
+    params: {"module":"Product", "action":"editProductCollectPropertyName"}
+
+product_collect_property_name_edit:
+    url: /edit-product-collect-property-name/:property_name_id
+    params: {"module":"Product", "action":"editProductCollectPropertyName"}
+
+
+
+
+
+[SLOTS]
+
+[ACTIONS]
+
+*:
+    js: formvalidator.js!, product_admin.js
+    css: product.css

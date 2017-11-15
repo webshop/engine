@@ -1,0 +1,12 @@
+<form id="category_edit_form">
+    <input type="hidden" name="category[id]" id="category_id" value="::category_id::" />
+    <span><gml>Name</gml>:</span>
+    <input type="hidden" name="category[parent_id]" id="category_parent_id" value="::parent_id::" />
+    <input type="text" name="category[name]" id="category_name" value="::category_name::" style="width: 300px;" />
+    <span><gml>Default sort by</gml></span>:
+    <select name="category[default_sort_by]">::sort_by_select_options::</select>
+    <button type="button" class="btn btn-small btn-primary" onclick="Category.saveCategory()"><gml>Save</gml></button>
+    <button type="button" class="btn btn-small" onclick="Category.hideEditCategory()"><gml>Cancel</gml></button>
+    
+</form>
+<div id="category_edit_image_form_container"></div>

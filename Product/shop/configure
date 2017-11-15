@@ -1,0 +1,78 @@
+[RULES]
+
+product_collect_list:
+    url: /list-product-collect
+    params: {"module":"Product", "action":"listProductCollect"}
+
+product_collect_view:
+    url: /view-product-collect/:collect_id
+    params: {"module":"Product", "action":"viewProductCollect"}
+
+product_collect_view_by_handle:
+    url: /products/:product_handle
+    params: {"module":"Product", "action":"viewProductCollect"}
+
+product_collect_list_by_category:
+    url: /category/:category_id/:category_name
+    params: {"module":"Product", "action":"listProductCollectInCategory"}
+
+product_collect_list_by_category_handle_all:
+    url: /collections
+    params: {"module":"Product", "action":"listProductCollectInCategory"}
+
+product_collect_list_by_category_handle:
+    url: /collections/:handle
+    params: {"module":"Product", "action":"listProductCollectInCategory"}
+
+product_collect_list_by_category_tags:
+    url: /collections/tagged/:tags
+    params: {"module":"Product", "action":"listProductCollectInCategory"}
+
+product_collect_list_by_category_handle_tags:
+    url: /collections/:handle/tagged/:tags
+    params: {"module":"Product", "action":"listProductCollectInCategory"}
+
+product_collect_search:
+    url: /search/:search_term
+    params: {"module":"Product", "action":"listProductCollectSearch"}
+
+product_collect_favourites:
+    url: /product-collect-favourites
+    params: {"module":"Product", "action":"listProductCollectFavourites"}
+
+product_collect_compare:
+    url: /product-collect-compare
+    params: {"module":"Product", "action":"renderCompare"}
+
+product_collect_list_by_discount:
+    url: /discount/:discount_id/:discount_name
+    params: {"module":"Product", "action":"listProductCollectInDiscount"}
+
+product_search:
+    url: /search
+    params: {"module":"Product", "action":"searchProductCollect"}
+
+[SLOTS]
+
+category_tree:
+    module: Product
+    action: categoryTree
+
+product_quick_search_form:
+    module: Product
+    action: quickSearchFrom
+
+compare:
+    module: Product
+    action: compare
+
+last_view:
+    module: Product
+    action: lastView
+
+[ACTIONS]
+
+*:
+    js: formvalidator.js!, product.js
+    css: product.css
+    allow: "all"

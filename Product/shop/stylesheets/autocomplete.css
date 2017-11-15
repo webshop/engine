@@ -1,0 +1,88 @@
+#ac_container{
+    position: relative;
+}
+#ac_list{
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: none;
+    left: 3px;
+    position: absolute;
+    top: 30px;
+    width: 234px;
+    -webkit-box-shadow: 5px 5px 5px 0px #444;
+    -moz-box-shadow: 5px 5px 5px 0px #444;
+    box-shadow: 5px 5px 5px 0px #444;
+    border-left:1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 200;
+}
+
+div.autocompletegif_cnt{
+    width:16px;
+    height: 16px;
+    position:absolute;
+    right: 5px;
+    top: 8px;
+    color:#aaa;
+    font-size: 12px;
+    line-height: 14px;
+    font-style: italic;
+}
+
+/*AC ITEM*/
+div.ac_item_container_text,
+div.ac_item_container{
+    padding:8px;
+    background: #eaeaea;
+    color:#959595;
+    border:0px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+div.ac_item_container.ac_item_even{
+    background: #FFFFFF;
+}
+div.ac_item_container.ac_item_odd{
+    background: #FFFFFF;
+}
+
+div.ac_item_container.ac_active{
+    background: #efefef;
+}
+div.ac_item_container a{
+    
+}
+
+div.ac_item_container .ac_item_title{
+    height: 34px;
+    line-height: 16px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+div.ac_item_container .ac_item_price{
+    color:#50C2E7;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+div.ac_item_image_container{
+    float:left;
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align:center;
+    border:1px solid #E4E4E4;
+}
+
+div.ac_item_text_container{
+    float:left;
+    width:148px;
+    margin: 4px;
+}

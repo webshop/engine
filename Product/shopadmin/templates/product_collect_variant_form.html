@@ -1,0 +1,23 @@
+<!--new-->
+<h2>New Product Variant</h2>
+<!--new-->
+<!--edit-->
+<h2>Edit Product Variant</h2>
+<!--edit-->
+<form id="product_collect_variant_form" action="/Product/saveProductCollectVariant" method="post">
+    <input type="hidden" id="id_product_collect_variant_id" name="product_collect_variant[id]" value="::id::">
+    Variáns név: <input type="text" name="product_collect_variant[name]" value="::name::">
+    <button type="submit" onclick="">Mentés</button>
+</form>
+<!--edit-->
+<h2><gml>Edit Variant values</gml></h2>
+<form id="product_collect_variant_value_form">
+    <input type="hidden" id="id_product_collect_variant_value_id" name="product_collect_variant_value[id]" value="0">
+    <gml>Variáns érték:</gml><input type="text" id="id_product_collect_variant_value_name"  name="product_collect_variant_value[name]" value="">
+    <button type="button" onclick="ProductCollectVariant.saveValue()"><gml>Mentés</gml></button>
+</form>    
+<h3><gml>Variant values</gml></h3>
+<div id="id_product_collect_variant_values">
+    ::table::
+</div>
+<!--edit-->

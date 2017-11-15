@@ -1,0 +1,37 @@
+<h3>Edit Product</h3>
+<form id="product_form" action="/Product/saveProductCollectProduct" method="post">
+    <input type="hidden" id="id_product_id" name="product[id]" value="::id::">
+    <input type="hidden" name="product[product_collect_id]" value="::product_collect_id::">
+    <gml>Név</gml>: <input type="text" name="product[name]" value="::name::">
+    
+    
+    <fieldset>
+        <legend><gml>Avaible piece in stores</gml></legend>
+        <a href="::url_for('@store')::" target="_blank"><gml>Edit stores</gml></a><br>
+
+        <ul>
+            <!--product_piece-->
+            <li>::store_name:: : <input type="text" name="product_piece[::store_id::]" value="::store_piece::"></li>
+            <!--product_piece-->
+        </ul>    
+    </fieldset>
+        
+    
+    <gml>Egyedi árat adok</gml>: <input type="checkbox" name="unique" value="1" ::checked_price_overrided::> <br>
+    <gml>Compare at price</gml>: <input type="text" name="product[compare_at_price]" value="::compare_at_price::">
+    <gml>Price</gml>: <input type="text" name="product[price]" value="::price::">
+    <gml>Súly</gml>: <input type="text" name="product[weight]" value="::weight::">
+    <gml>Állapot</gml>:
+    <select  name="product[status]">
+        ::option_status::
+    </select><br>
+    <gml>Variants</gml>:
+    ::variants::
+    <br><br>
+    <!--kepek-->
+    <gml>Képek</gml>:
+    ::image_form::
+    <!--kepek-->
+    <button type="submit" onclick=""><gml>Mentés</gml></button>
+</form>
+<br><br>

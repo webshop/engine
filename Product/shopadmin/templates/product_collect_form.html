@@ -1,0 +1,102 @@
+<!--new-->
+<h2><gml>New Product Collect</gml></h2>
+<!--new-->
+<!--edit-->
+<h2><gml>Edit Product Collect</gml></h2>
+<!--edit-->
+<form id="product_collect_form" action="/Product/saveProductCollect" method="post">
+    <input type="hidden" id="id_product_collect" name="product_collect[id]" value="::id::">
+    
+    <gml>Név</gml>: <input type="text" id="prod_name" name="product_collect[name]" value="::name::">
+    <gml>Handle</gml>: <input type="text" id="handle" name="product_collect[handle]" value="::handle::">
+    
+    <!--new-->
+    <gml>Típus</gml>:<select id="id_product_collect_type_select" name="product_collect[product_collect_type_id]" onchange="ProductCollect.changeType()">::option_product_collect_type::</select><br>
+    <!--new-->
+    <!--edit-->
+    <gml>Típus</gml>:<input type="hidden" id="id_product_collect_type_select" name="product_collect[product_collect_type_id]" value="::product_collect_type_id::"> ::product_collect_type_name::<br>
+    <!--edit-->
+    
+    
+    <gml>Állapot</gml>:
+    <select  name="product_collect[status]">
+        ::option_status::
+    </select><br>
+    
+    <gml>Compare at price</gml>: <input type="text" name="product_collect[compare_at_price]" value="::compare_at_price::">
+    <gml>Price</gml>: <input type="text" name="product_collect[price]" value="::price::">
+    <gml>Category</gml>: <span id="category"></span><br>
+    <gml>Súly</gml>: <input type="text" name="product_collect[weight]" value="::weight::">
+    
+    <gml>Rövid Szöveg</gml>:<br>
+    ::textarea_short_text:: <br>
+    <gml>Szöveg</gml>:<br>
+    ::textarea_long_text:: <br>
+    
+    <gml>Page Title</gml>: <input type="text" name="product_collect[seo_title]" value="::seo_title::">
+    <gml>Meta description</gml>: <input type="text" name="product_collect[seo_description]" value="::seo_description::">
+    
+    <gml>Tags</gml>:<textarea id="tags" style="width:500px"></textarea>
+    <!--edit-->
+    <gml>Képek</gml>:
+    ::image_upload_form::
+    <!--edit-->
+    <!--new-->
+    <button type="submit" onclick="tinyMCE.triggerSave();"><gml>Mentés</gml></button>
+    <!--new-->
+    <!--edit-->
+    <h3>Set Properties</h3>
+    <div id="id_product_collect_variant">
+    </div>
+    <button type="submit" onclick="tinyMCE.triggerSave();"><gml>Mentés</gml></button>
+    <!--edit-->
+</form>
+<!--edit-->
+<h3><gml>Products</gml></h3>
+<div id="id_product_collect_product_edit"></div>
+<button type="button" onclick="Product.reGenerate()"><gml>Újragenerálás</gml></button>
+<button type="button" onclick="Product.edit(0)"><gml>Új product</gml></button> 
+<div>
+    ::table::
+</div>
+<br><br>
+<!--edit-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        var handle=$("#handle").val().trim();
+        $("#handle").change(function(){
+            if($(this).val() == ''){
+                handle = '';
+            }
+        });
+        $("#handle").keyup(function(){
+            if($(this).val() != ''){
+                handle = $(this).val();
+            }
+        });
+        $("#prod_name").keyup(function(){
+            if(handle == ''){
+                var text = $(this).val();
+                $("#handle").val(lib.handleize(text));
+            }
+        });
+        
+        
+        $('#tags').textext({
+            plugins : 'tags prompt focus autocomplete ajax arrow',
+            tagsItems : ::tags::,
+            prompt : lang('Add tags for product'),
+            htmlHidden: '<input type="hidden" name="tags"/>',
+            ajax : {
+                url : '/TagManager/getAllTagsNames',
+                dataType : 'json',
+                cacheResults : true
+            }
+        });
+        CategorySelector.Init('category', true,'product_collect[category_id]');
+        CategorySelector.show(::category_id::);
+    });
+</script>
+
+

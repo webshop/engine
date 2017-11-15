@@ -1,0 +1,42 @@
+<!--new-->
+<h2><gml>New Product Collect Type</gml></h2>
+<!--new-->
+<!--edit-->
+<h2><gml>Edit Product Collect Type</gml></h2>
+<!--edit-->
+<form id="product_collect_type_form" action="/Product/saveProductCollectType" method="post">
+    <input type="hidden" id="id_product_collect_type" name="product_collect_type[id]" value="::id::">
+    Típus név: <input type="text" name="product_collect_type[name]" value="::name::">
+    <button type="submit" onclick="">Mentés</button>
+</form>
+
+<!--edit-->
+<h2><gml>Set Product Collect Variant Type</gml></h2>
+<form id="product_collect_type_variant_form" action="/Product/saveProductCollectType" method="post">
+    <input type="hidden" id="id_product_collect_type_variant_no" name="no_variant" value="0">
+    <select multiple="multiple" class="limited_multiple" name="product_collect_variant_type[]" style="width:300px;" id="id_multiselect_variant">
+        ::options_variant::
+    </select>
+    <button type="button" onclick="ProductCollectType.saveVariantType()"><gml>Mentés</gml></button>
+    <button type="button" onclick="ProductCollectType.saveVariantNoType()"><gml>Nincs variáns</gml></button>
+</form>
+<a href="::url_for('@product_collect_variant_list')::"><gml>Add / Modify product collect variants</gml></a>
+<script>
+    var selectedVariant="::selected_variant::";
+</script>
+<br><br>
+<!--edit-->
+
+<!--edit-->
+<h2><gml>Set Product Collect Property Type</gml></h2>
+<form id="product_collect_type_property_form" action="/Product/saveProductCollectType" method="post">
+    <select multiple="multiple" class="no_limited_multiple" name="product_collect_property_type[]" style="width:300px;" id="id_multiselect_property">
+        ::options_property::
+    </select>
+    <button type="button" onclick="ProductCollectType.savePropertyType()"><gml>Mentés</gml></button>
+</form>
+<a href="::url_for('@product_collect_property_name_list')::"><gml>Add / Modify product collect property</gml></a>
+<script>
+    var selectedProperty="::selected_property::";
+</script>
+<!--edit-->

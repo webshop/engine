@@ -1,0 +1,27 @@
+<div id="quick-search-container">
+    <input type="text" name="search_text" value="::search_text::" id="quick_search_text" placeholder="keresés...">
+</div>
+<script type="text/javascript">
+    AutoComplete.init({
+        url : '/Product/quickSearch',
+        element_selector : '#quick_search_text',
+        delay : 100,
+        template:'#tmpl_ac_item'
+    });
+</script>
+<script id="tmpl_ac_item" type="text/x-jquery-tmpl">
+    <div class="ac_item_container cf">
+        <div class="ac_item_image_container">
+            <a href="${product_href}"><img src="${first_img}" title="${title}" alt="${title}"></a>
+        </div>
+        <div class="ac_item_text_container">
+            <div class="ac_item_title">
+                <a href="${product_href}">${title}</a>
+            </div>
+            <div class="ac_item_price">
+                <input type="button" onclick="AutoComplete.navigateTo('${product_href}');" value="Részletek">
+                ${price}
+            </div>
+        </div>
+    </div>
+</script>

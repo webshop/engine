@@ -1,0 +1,30 @@
+<h2 style="margin: 20px 0;">Category list</h2>
+<div style="float: left; width: 250px; margin-right: 15px;">
+    <div style="margin: 0 0 20px 20px">
+        <button type="button" class="btn btn-small" onclick="Category.expandCategoryTree()"><i class="icon-plus"></i><gml>Expand tree</gml></button>
+        <button type="button" class="btn btn-small" onclick="Category.closeCategoryTree()"><i class="icon-minus"></i><gml>Close tree</gml></button>
+    </div>
+    ::tree::
+</div>
+
+<div style="margin: 0 20px 20px;">
+    <fieldset>
+        <legend><gml>Selected category</gml></legend>
+        <img style="float: right" id="category_img_prev" src="" />
+        <div id="bread_crumbs"></div>
+        <button type="button" class="btn btn-small" onclick="Category.editCategory()"><i class="icon-edit"></i><gml>Modify</gml></button>
+        <button type="button" class="btn btn-small btn-success" onclick="Category.newChildCategory()"><i class="icon-plus"></i><gml>New sub-category</gml></button>
+        <button type="button" class="btn btn-small btn-danger" onclick="Category.deleteCategory()"><i class="icon-trash"></i><gml>Delete category</gml></button>
+    </fieldset>
+</div>
+<div id="category_editor">
+    
+</div>
+<div id="category_loader" class="loader-small"></div>
+<!--<span id="category"></span>-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        Category.Init();
+        Category.showCategory(::selected::);
+    });
+</script>

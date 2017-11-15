@@ -1,0 +1,18 @@
+<!--product_collect_item-->
+<div style="width:100px;margin-right: 10px;float:left;" id="id_product_collect_item_::id::">
+    <a href="::url_for('@product_collect_view?collect_id=::id::')::">::name::</a> <br><br><br>
+    <a href="::url_for('@product_collect_view?collect_id=::id::')::">::image::</a><br><br>
+    <hr>
+    <del>::compare_at_price::</del><br>
+    ::price::<br>
+    <hr><br>
+    <a href="::url_for('@product_collect_view?collect_id=::id::')::"><gml>View Product</gml></a><br>
+    <button type="button" onclick="ProductCollectCompare.add(::id::)"><gml>Összehasonlítás</gml></button><br>
+    <!--favourite[add]-->
+    <button type="button" onclick="UserFavouriteProductCollect.add(::id::)"><gml>Kedvencekhez</gml></button>
+    <!--favourite[add]-->
+    <!--favourite[remove]-->
+    <button type="button" onclick="UserFavouriteProductCollect.remove(::id::)"><gml>Eltávolítás a kedvencek közül</gml></button>
+    <!--favourite[remove]-->
+</div>
+<!--product_collect_item-->

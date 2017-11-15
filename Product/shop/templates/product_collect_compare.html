@@ -1,0 +1,28 @@
+<table width="100%">
+    <tr>
+        <td>
+            <gml>Összehasonlítás</gml>
+            <span id="id_compare_count">::db::</span>
+            termék
+        </td>
+        <td>
+            <a href="javascript:void(0)" onclick="ProductCollectCompare.removeAll()"><gml>összeset törli</gml></a>
+        </td>
+        <td>
+            <!--product_collect_item-->
+            <div class="product_collect_compare" id="product_collect_compare_::id::" style="float:left;margin-right:5px;">
+                <div style="width:100px;height:100px;overflow: hidden;position: relative;">
+                    ::img::
+                    <a  style="position: absolute;right:0px;top:0px;color:#ff0000;font-size:30px;" href="javascript:void(0)" onclick="ProductCollectCompare.remove(::id::)"> x </a>
+                </div>
+            </div>
+            <!--product_collect_item-->
+        </td>
+        <td>
+            <a href="::url_for('@product_collect_compare')::"><gml>Összehasonlítás</gml></a>
+        </td>
+        <td>
+            <a href="javascript:void(0)" onclick="ProductCollectCompare.hide()"><gml>Eltűntet</gml></a>
+        </td>
+    </tr>
+</table>

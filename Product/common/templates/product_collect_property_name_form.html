@@ -1,0 +1,34 @@
+<!--new-->
+<h2><gml>New Product Collect Property</gml></h2>
+<!--new-->
+<!--edit-->
+<h2><gml>Edit Product Collect Property</gml></h2>
+<!--edit-->
+<form id="product_collect_property_name_form" action="/Product/saveProductCollectPropertyName" method="post">
+    <input type="hidden" id="id_product_collect_property_name_id" name="product_collect_property_name[id]" value="::id::">
+    <gml>Tulajdonság név</gml>: <input type="text" name="product_collect_property_name[name]" value="::name::">
+    <gml>Tulajdonság típus</gml>: <br>
+    <select name="product_collect_property_name[type]">
+        ::option_property_type::    
+    </select>
+    <button type="submit" onclick="">Mentés</button>
+</form>
+<!--edit-->
+    <!--values[edit]-->
+    <h2><gml>Edit Product Collect Property Values</gml></h2>
+    <form id="product_collect_property_select_value_form">
+        <input type="hidden" id="id_product_collect_property_name_select_value_id" name="product_collect_property_name_select_value[id]" value="0">
+        <gml>Tulajdonság érték:<gml><input type="text" id="id_product_collect_property_name_select_value"  name="product_collect_property_name_select_value[name]" value="">
+        <button type="button" onclick="ProductCollectPropertyName.saveValue()"><gml>Mentés</gml></button>
+    </form>    
+    <h3><gml>Tulajdonság értékek</gml></h3>
+    <div id="id_product_collect_property_name_select_values">
+        ::table::
+    </div>
+    <!--values[edit]-->
+    <!--values[no_edit]-->
+    <h2><gml>Edit Product Collect Property Values</gml></h2>
+    <gml>You can't edit in case of Input type field</gml>
+    <!--values[no_edit]-->
+<!--edit-->
+

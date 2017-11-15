@@ -1,0 +1,26 @@
+::slot("store_breadcrumbs", {"category_id":"::category_id::"})::
+<div class="main_category_items">
+    <h1><gml>Main page</gml></h1>
+    <div class="clearfix">
+        <!--main_category-->
+        <div class="category_item main_category">
+            <div class="category_title">
+                <a href="::main_category_url::">::main_category_name::</a>
+            </div>
+            <div class="category_pic">
+                <a href="::main_category_url::"><img src="::main_category_img::" alt="::main_category_img_name::" title="::main_category_img_name::"></a>
+            </div>
+            <div class="category_sumitem">
+            <ul>
+                <!--sub_category_item-->
+                <li>
+                    <a href="::category_url::">::category_name::</a>
+                </li>
+                <!--sub_category_item-->
+            </ul>
+                </div>
+        </div>
+        <!--main_category-->
+        ::main_categories::
+    </div>
+</div>

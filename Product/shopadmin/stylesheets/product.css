@@ -1,0 +1,53 @@
+.category-tree {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    line-height: 1.0;
+    padding-left: 22px;
+    
+    min-height: 250px;
+    max-height: 500px;
+    overflow: auto;
+}
+.category-tree ul {
+    display: none;
+    padding-left: 16px;
+    margin: 0 0 5px;
+}
+.category-tree .open {
+    font-style: italic;
+    font-weight: bold;
+}
+.category-tree .closed {
+    font-style: normal;
+}
+.category-tree .selected {
+    font-weight: bold;
+    color: #DD3434 !important;
+}
+.category-tree ul li{
+    white-space: nowrap;
+    margin: 3px 0;
+    overflow: hidden;
+    line-height: 1.1;
+}
+#category_editor{
+    display: none;
+    float: left;
+    max-width: 870px;
+}
+#bread_crumbs{
+    font-size: 1.2em;
+    margin: 0 10px 10px;
+}
+.uploadsinglePhoto img{
+    border: 1px solid #d1d1d1;
+    padding: 3px;
+    margin-top: 5px;
+}
+.uploadsingleInstru .btn-large{
+    overflow: hidden;
+}
+#GalleryAjaxPopup{
+    width: 150px;
+    height: 37px;
+}

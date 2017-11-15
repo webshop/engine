@@ -1,0 +1,36 @@
+<h1>::name::</h1>
+<input type="hidden" name="product_collect_id" id="id_product_collect_id" value="::id::">
+<div class="cf" id="id_cf">
+    <div style="float:left;margin:10px;">
+        ::first_img:: <br><br>
+        <div style="width:500px;">
+            ::more_imgs::
+        </div>
+    </div>
+    <div style="float:left;">
+        <h3><gml>Price</gml></h2>
+        <del><span id="id_variant_compare_at_price">::compare_at_price::</span></del><br>
+        <span id="id_variant_price">::price::</span><br><br>
+        
+        ::variants_select::
+        
+        <select name="quantity" id="id_quantity">
+            ::quantity_option::
+        </select>
+        <button type="button" onclick="Cart.addToCart()"><gml>Add To Cart</gml></button><br><br>
+        <button type="button" onclick="ProductCollectCompare.add(::id::)"><gml>Összehasonlítás</gml></button>
+        <button type="button" onclick="UserFavouriteProductCollect.add(::id::)"><gml>Kedvencekhez</gml></button>
+    </div>
+</div>
+<h3><gml>Properties</gml></h2>
+::properties::
+
+
+<script>
+    $(document).ready(function(){
+        $('#id_cf').photobox();
+    });
+</script>
+
+
+

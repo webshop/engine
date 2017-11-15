@@ -1,0 +1,50 @@
+<div style="padding:10px 0px;">
+    <form id="id_product_collect_params_form">
+        <!--<input type="hidden" name="num" value="::num::" id="id_params_num">
+        -->
+        <input type="hidden" name="record" value="::record::" id="id_params_record">
+        <table>
+            <tr>
+                <td align="left">
+                    <b><gml>Sorrend</gml>: </b>
+                </td>
+                <td align="left">
+                    <select name="order_type" onchange="ProductCollect.listReload()">
+                        ::option_order_type::
+                    </select>
+                </td>
+                <td align="left">
+                    <b><gml>Megjelenítés</gml>: </b>
+                </td>
+                <td align="left">
+                    <select name="num" onchange="ProductCollect.listReload()">
+                        ::option_record_per_page::
+                    </select>
+                    <gml>oldalanként</gml>
+                </td>
+                <td align="left">
+                    <b><gml>Nézet</gml>: </b>
+                </td>
+                <td align="left">
+                    <input type="hidden" name="list_type" value="::list_type::" id="id_product_collect_list_type">
+                    <a href="javascript:void(0)" onclick="ProductCollect.changeListType(2);ProductCollect.listReload()">Rács</a>
+                    <a href="javascript:void(0)" onclick="ProductCollect.changeListType(1);ProductCollect.listReload()">Lista</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <b><gml>Mutat</gml></b>
+                    ::from:: - ::to::/ ::total::
+                </td>
+                <td align="left">
+                    ::paginator::
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
